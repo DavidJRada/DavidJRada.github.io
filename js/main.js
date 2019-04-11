@@ -127,7 +127,12 @@ let oneResult;
 const requestForecast = () => {
     //Pull values from local storage
     city = localStorage.getItem('city')
+    
+    let citySpan = $('<span>').text(city)
+        console.log(citySpan[0])
+
     unit = localStorage.getItem('unit')
+    // unit.addClass('cityUnit')
 
 
     $.ajax({
@@ -166,7 +171,7 @@ const requestForecast = () => {
             $('table').append(oneResult)
 
         }
-        $location = $('<div>').text(`You are in ${city} and using the ${unit} system`).addClass('currentLocation')
+        $location = $('<div>').html(`<p>You are in <span>${city}</span> and using the <span>${unit}</span> system`).addClass('currentLocation')
         $('#location').append($location)
     })
 }

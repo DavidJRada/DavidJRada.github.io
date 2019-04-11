@@ -203,14 +203,12 @@ tr>* {
 }
 
 .currentLocation {
-    /* font-family: Arial, Helvetica, sans-serif; */
     margin: 15px;
-    /* background: cornflowerblue; */
 }
 
 span {
     font-size: 25px;
-    color: green;
+    color: indianred;
     text-transform: capitalize;
 }
 
@@ -289,7 +287,6 @@ span {
     .todo {
         width: 50%;
     }
-
     #newTaskInput {
         font-size: 10px;
     }
