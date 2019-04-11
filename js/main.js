@@ -112,10 +112,10 @@ const requestCurrent = () => {
         //Call the appendWeather method of this weather item to add the generated HTML to the table
         currentWeather.appendWeather();
         // $('#modal').empty()
-        $location = $('<div>').text(`You are in ${city} and using the ${unit} system`).addClass('currentLocation')
+        $location = $('<div>').text(`Your current weather in `).addClass('currentLocation')
+        $('<span>').text(city).appendTo($location)
         $('#modal').prepend($location)
-        
-        
+
         
     })
     $('.currentLocation').empty()

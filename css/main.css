@@ -110,12 +110,6 @@ nav>ul {
     }
 }
 
-@media only screen and (max-width: 565px) {
-    #city {
-        width: 100%;
-    }
-}
-
 .productivity {
     display: flex;
     width: 65%;
@@ -192,12 +186,11 @@ tr>* {
     text-align: center;
     margin: 0 auto;
     font-size: 18px;
-    height: 40%;
+    height: 50%;
     width: 40%;
     top: 25%;
     left: 25%;
     z-index: 1;
-    overflow: auto;
     background-color: rgb(204, 172, 121);
     border: 5px solid black;
     border-radius: 20px;
@@ -210,8 +203,15 @@ tr>* {
 }
 
 .currentLocation {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    margin: 15px;
     /* background: cornflowerblue; */
+}
+
+span {
+    font-size: 25px;
+    color: green;
+    text-transform: capitalize;
 }
 
 .forecastLocation {
@@ -219,17 +219,20 @@ tr>* {
 }
 
 .modalText {
-    margin-bottom: 20px;
+    height: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 #closeBtn {
     position: absolute;
-    align-self: center;
-    justify-self: center;
+    align-self: flex-end;
+    justify-self: flex-end;
+    font-size: 20px;
     bottom: 0;
-    right: 38%;
+    right: 30%;
     margin: 0 auto;
-    width: 25%;
+    width: 40%;
 }
 
 .btn:hover {
@@ -286,14 +289,7 @@ tr>* {
     .todo {
         width: 50%;
     }
-    #closeBtn {
-        right: 40%;
-        font-size: 10px;
-        width: 40px;
-    }
-    #modal {
-        font-size: 17px;
-    }
+
     #newTaskInput {
         font-size: 10px;
     }
@@ -306,5 +302,21 @@ tr>* {
     #location {
         font-size: 18px;
         margin: 3px;
+    }
+    #closeBtn {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #city {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #modal {
+        height: 60%;
+        font-size: 15px;
     }
 }
