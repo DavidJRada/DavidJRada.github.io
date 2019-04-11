@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+body {
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    background-color: rgb(241, 224, 197)
+}
+
+h1 {
+    text-align: center;
+    color: rgb(54, 54, 54);
+}
+
+#units {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.city {
+    /* align-items: center; */
+    left: 1000;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    background: indianred;
+    width: 100%;
+}
+
+nav>ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 2px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.forecastDisplay {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    background-color: rgb(177, 224, 197);
+    min-height: 500px;
+    width: 35%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.productivity {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    margin: 0 auto;
+    min-height: 520px;
+    background-color: rgb(188, 244, 245)
+}
+
+.toDo {
+    width: 45%;
+    padding: 15px;
+}
+
+.toDoList, .completed {
+    font-family: Verdana;
+}
+
+table>th {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.toDoList>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    top: 25;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid black;
+}
+
+.completed {
+    padding-top: 55px;
+    width: 50%;
+}
+
+.completed>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    top: 25;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid black;
+}
+
+.completedBtn {
+    height: 20px;
+    width: 58px;
+}
+
+tr>* {
+    border: 1px solid black;
+}
+
+#newTaskInput {
+    text-align: center;
+    width: 95%;
+    height: 20px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    height: 40%;
+    width: 40%;
+    top: 25%;
+    left: 25%;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgb(204, 172, 121);
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.modalText {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: flex;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    background: white;
+    padding: .5rem;
+    width: 100%;
+    border: 3px solid black;
+    margin-right: 2.6rem;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+}
+
+#closeBtn {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    bottom: 0;
+    right: 38%;
+    margin: 0 auto;
+    width: 25%;
+}
+
+.btn:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+}
+
+.btn:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
+}
+
+.nav2 {
+    display: none;
+}
+
+.nav3 {
+    display: none;
+}
+
+@media only screen and (max-width: 550px) {
+    .wrapper {
+        flex-direction: column;
+        font-size: 14px;
+    }
+    nav {
+        display: none;
+    }
+    .nav2 {
+        display: block;
+        display: flex;
+        background: indianred;
+        justify-content: center;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .nav2>ul {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+    .forecastDisplay {
+        width: 75%;
+        margin: 0 auto;
+        padding: 10;
+        height: 400px;
+    }
+    .productivity {
+        width: 75%;
+        margin: 0 auto;
+    }
+    .todo {
+        width: 50%;
+    }
+    #closeBtn {
+        right: 40%;
+        font-size: 10px;
+        width: 40px;
+    }
+    #modal {
+        font-size: 17px;
+    }
+    #newTaskInput {
+        font-size: 10px;
+    }
+    table>th {
+        width: 50%
+    }
+}
+
+/* END RESPONSIVE */
