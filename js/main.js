@@ -81,7 +81,7 @@ class ForecastItem extends WeatherItem {
 const requestCurrent = () => {
     $.ajax({
         //Included city and unit variables
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&units=" + unit + "&APPID=0d4a536dd84f2c41a282e010c8caaf60",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&units=" + unit + "&APPID=0d4a536dd84f2c41a282e010c8caaf60",
         type: "GET",
         data: {
 
@@ -109,7 +109,7 @@ let oneResult;
 const requestForecast = () => {
     $.ajax({
         //Included city and unit variables
-        url: "http://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&units=" + unit + "&APPID=0d4a536dd84f2c41a282e010c8caaf60",
+        url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&units=" + unit + "&APPID=0d4a536dd84f2c41a282e010c8caaf60",
         type: "GET",
         data: {
 
