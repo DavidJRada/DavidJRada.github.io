@@ -111,9 +111,14 @@ const requestCurrent = () => {
         const currentWeather = new WeatherItem(temp, humidity, weather, img);
         //Call the appendWeather method of this weather item to add the generated HTML to the table
         currentWeather.appendWeather();
-
-
+        // $('#modal').empty()
+        $location = $('<div>').text(`You are in ${city} and using the ${unit} system`).addClass('currentLocation')
+        $('#modal').prepend($location)
+        
+        
+        
     })
+    $('.currentLocation').empty()
 }
 //Assign a global variable that will be used to check if the forecast button has been clicked
 let oneResult;
@@ -123,8 +128,7 @@ const requestForecast = () => {
     //Pull values from local storage
     city = localStorage.getItem('city')
     unit = localStorage.getItem('unit')
-    console.log(city)
-    console.log(unit)
+
 
     $.ajax({
         //Included city and unit variables
@@ -162,6 +166,8 @@ const requestForecast = () => {
             $('table').append(oneResult)
 
         }
+        $location = $('<div>').text(`You are in ${city} and using the ${unit} system`).addClass('currentLocation')
+        $('#location').append($location)
     })
 }
 
@@ -209,6 +215,7 @@ $(() => {
         requestCurrent();
 
         //Clear the display
+        // $('.currentLocation').empty()
         $('.modalText').empty()
     })
     //Adds event listener to the forecast button
@@ -224,6 +231,8 @@ $(() => {
         if (oneResult) {
             oneResult = false
             //If the oneResult variable is false, it will run the requestForecast function
+            $('#location').empty()
+
         } else {
             //Get forecast info
             requestForecast();
