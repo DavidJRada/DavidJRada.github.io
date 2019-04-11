@@ -42,16 +42,16 @@
     <div class='wrapper'>
         <div class='forecastDisplay'>
             <div class='units_city'>
+                <div class='units'>
                 <form id='units'><input type='radio' name='unit' value='metric'>Metric</input>
-                    <div class='units'>
                         <input type='radio' name='unit' value='imperial'>Imperial</input>
+                        <div class='city'><input type='text' id='city' placeholder='Enter City'>
+                        </div>
                 </form>
-                <div class='city'><input type='text' id='city' placeholder='Enter City'>
-                </div>
             </div>
         </div>
         <div class='buttons'>
-            <button id='getCurrent' class="btn">Current</button>
+            <button id='getCurrent' class="btn">Current Weather</button>
             <button id='forecast' class='btn'>Forecast</button>
         </div>
         <table>
