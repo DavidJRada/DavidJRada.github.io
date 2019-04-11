@@ -1,13 +1,14 @@
 //Assign city a variable to change location
 let city = '';
 
+//Global variable to assign the units input
+let unit = '';
+
 //Function to change the city based on user input
 const getCity = () => {
     city = $('#city').val();
 }
 
-//Global variable to assign the units input
-let unit = 'imperial';
 
 //Retrieve the unit selection from the radio buttons
 const getUnit = () => {
