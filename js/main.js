@@ -1,18 +1,25 @@
-//Assign city a variable to change location
-let city = '';
-
-//Global variable to assign the units input
-let unit = '';
-
-//Function to change the city based on user input
-const getCity = () => {
+//Function to check for values of City and Unit
+const cityUnit = () => {
+    //Assign city to the value that was entered
     city = $('#city').val();
-}
-
-
-//Retrieve the unit selection from the radio buttons
-const getUnit = () => {
+    //If city has no value(nothing has been entered yet), get city from local storage
+    if (!city) {
+        city = localStorage.getItem('city')
+    } else {
+        //If there is a value, set that value to local storage
+        localStorage.setItem('city', city);
+    }
+    //Assign unit to the value that was entered
     unit = $('input[name=unit]:checked').val()
+
+    //If unit has no value(nothing has been entered yet), get unit from local storage
+    if (!unit) {
+        unit = localStorage.getItem('city')
+        //If there is a value, set that value to local storage
+    } else {
+        localStorage.setItem('unit', unit)
+    }
+
 }
 
 //Array of weather icons that correspond to the weather conditions
@@ -79,6 +86,12 @@ class ForecastItem extends WeatherItem {
 
 //Request current weather conditions using AJAX request
 const requestCurrent = () => {
+    //Pull values from local storage
+    city = localStorage.getItem('city')
+    unit = localStorage.getItem('unit')
+    console.log(city)
+    console.log(unit)
+
     $.ajax({
         //Included city and unit variables
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&units=" + unit + "&APPID=0d4a536dd84f2c41a282e010c8caaf60",
@@ -107,6 +120,12 @@ let oneResult;
 
 //Request forecast data for the next 5 instances(15 hours)
 const requestForecast = () => {
+    //Pull values from local storage
+    city = localStorage.getItem('city')
+    unit = localStorage.getItem('unit')
+    console.log(city)
+    console.log(unit)
+
     $.ajax({
         //Included city and unit variables
         url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&units=" + unit + "&APPID=0d4a536dd84f2c41a282e010c8caaf60",
@@ -183,11 +202,8 @@ $(() => {
         //Open the Modal
         openModal()
 
-        //Receive the user city
-        getCity()
-
-        //Get user unit measurement
-        getUnit()
+        //Retrieve city and units
+        cityUnit()
 
         //Get and display the current weather information
         requestCurrent();
@@ -198,11 +214,9 @@ $(() => {
     //Adds event listener to the forecast button
     $('#forecast').on('click', (e) => {
         e.preventDefault();
-        //Retrieve the user city
-        getCity()
 
-        //Get user unit measurement
-        getUnit()
+        //Retrieve the city and units
+        cityUnit()
 
         //Clears the forecast table
         $('.forecastedWeather').remove()
