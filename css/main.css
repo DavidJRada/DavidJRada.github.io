@@ -10,10 +10,10 @@ h1 {
     color: rgb(54, 54, 54);
 }
 
-
 #units {
     display: flex;
     justify-content: space-between;
+    font-size: 22px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -23,13 +23,19 @@ h1 {
     margin-right: 10px;
 }
 
+#city {
+    height: 30px;
+}
+
 nav {
     display: flex;
     background: indianred;
     width: 100%;
+    font-size: 22px;
 }
 
 nav>ul {
+    padding: 0;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -88,12 +94,24 @@ nav>ul {
         width: 50%;
         font-size: 12px;
     }
+    #units {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 644px) {
     .buttons {
         align-items: space-around;
         font-size: 14px;
+        width: 100%;
+    }
+    #units {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    #city {
         width: 100%;
     }
 }
