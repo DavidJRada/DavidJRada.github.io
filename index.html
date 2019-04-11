@@ -42,51 +42,50 @@
     <div class='wrapper'>
         <div class='forecastDisplay'>
             <div class='units_city'>
-                <div class='units'>
-                <form id='units'><input type='radio' name='unit' value='metric'>Metric</input>
-                        <input type='radio' name='unit' value='imperial'>Imperial</input>
-                        <div class='city'><input type='text' id='city' placeholder='Enter City'>
-                        </div>
+
+                <form id='units'>
+                    <div><input type='radio' name='unit' value='metric'>Metric</input></div>
+                    <div><input type='radio' name='unit' value='imperial'>Imperial</input></div>
+                    <div class='city'><input type='text' id='city' placeholder='Enter City'></div>
                 </form>
             </div>
+            <div class='buttons'>
+                <button id='getCurrent' class="btn">Current</button>
+                <button id='forecast' class='btn'>Forecast</button>
+            </div>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Temp</th>
+                    <th>Weather</th>
+                </tr>
+                <tr id='weatherRows'>
+                </tr>
+            </table>
         </div>
-        <div class='buttons'>
-            <button id='getCurrent' class="btn">Current Weather</button>
-            <button id='forecast' class='btn'>Forecast</button>
+        <nav class='nav2'>
+            <ul>
+                <h3>Add New Task</h3>
+            </ul>
+            <ul>
+                <h3>Completed Tasks</h3>
+            </ul>
+        </nav>
+        <div class='productivity'>
+            <div class='toDo'>
+                <form id='addNewTask'>
+                    <input type='text' id='newTaskInput' placeholder='Add New Task'>
+                </form>
+                <div class='toDoList'></div>
+                <br>
+            </div>
+            <div class='completed'>
+            </div>
         </div>
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Temp</th>
-                <th>Weather</th>
-            </tr>
-            <tr id='weatherRows'>
-            </tr>
-        </table>
-    </div>
-    <nav class='nav2'>
-        <ul>
-            <h3>Add New Task</h3>
-        </ul>
-        <ul>
-            <h3>Completed Tasks</h3>
-        </ul>
-    </nav>
-    <div class='productivity'>
-        <div class='toDo'>
-            <form id='addNewTask'>
-                <input type='text' id='newTaskInput' placeholder='Add New Task'>
-            </form>
-            <div class='toDoList'></div>
-            <br>
-        </div>
-        <div class='completed'>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

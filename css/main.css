@@ -10,10 +10,16 @@ h1 {
     color: rgb(54, 54, 54);
 }
 
-.units {
+
+#units {
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.city {
+    /* width: 30%; */
+    margin-right: 10px;
 }
 
 nav {
@@ -53,6 +59,7 @@ nav>ul {
     margin: 0 auto;
     width: 100%;
 }
+
 .btn {
     display: flex;
     flex-direction: column;
@@ -74,19 +81,20 @@ nav>ul {
         width: 45%;
     }
 }
+
 @media only screen and (max-width: 856px) {
     .btn {
         width: 50%;
         font-size: 12px;
     }
 }
-@media only screen and (max-width: 644px) {
 
-.buttons {
-    font-size: 12px;
-    /* padding: .5rem; */
-    width: 75%;
-}
+@media only screen and (max-width: 644px) {
+    .buttons {
+        align-items: space-around;
+        font-size: 14px;
+        width: 100%;
+    }
 }
 
 .productivity {
@@ -180,7 +188,6 @@ tr>* {
     margin-bottom: 20px;
 }
 
-
 #closeBtn {
     position: absolute;
     align-self: center;
@@ -259,5 +266,4 @@ tr>* {
     table>th {
         width: 50%
     }
-    
 }
