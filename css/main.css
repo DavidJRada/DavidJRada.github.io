@@ -351,9 +351,6 @@ span {
     }
     .nav3>ul {
         width: 95%;
-        /* padding: 5px; */
-        /* flex-direction: column; */
-        /* justify-content: space-around; */
         justify-content: stretch;
     }
     .nav3>ul>li {
