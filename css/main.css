@@ -25,6 +25,7 @@ h1 {
 
 #city {
     height: 30px;
+    margin-right: 3px;
 }
 
 nav {
@@ -56,7 +57,7 @@ nav>ul {
     padding-top: 20px;
     flex-direction: column;
     background-color: rgb(177, 224, 197);
-    min-height: 500px;
+    min-height: 600px;
     width: 35%;
 }
 
@@ -115,7 +116,7 @@ nav>ul {
     width: 65%;
     justify-content: space-between;
     margin: 0 auto;
-    min-height: 520px;
+    min-height: 620px;
     background-color: rgb(188, 244, 245)
 }
 
@@ -282,6 +283,7 @@ span {
     }
     .productivity {
         width: 75%;
+        height: 70%;
         margin: 0 auto;
     }
     .todo {
@@ -303,9 +305,6 @@ span {
     #closeBtn {
         font-size: 20px;
     }
-}
-
-@media only screen and (max-width: 550px) {
     #city {
         width: 100%;
     }
@@ -315,5 +314,11 @@ span {
     #modal {
         height: 60%;
         font-size: 15px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    #city {
+        margin: 0 auto;
+        width: 100%
     }
 }
