@@ -89,8 +89,6 @@ const requestCurrent = () => {
     //Pull values from local storage
     city = localStorage.getItem('city')
     unit = localStorage.getItem('unit')
-    console.log(city)
-    console.log(unit)
 
     $.ajax({
         //Included city and unit variables
@@ -129,7 +127,6 @@ const requestForecast = () => {
     city = localStorage.getItem('city')
     
     let citySpan = $('<span>').text(city)
-        console.log(citySpan[0])
 
     unit = localStorage.getItem('unit')
     // unit.addClass('cityUnit')

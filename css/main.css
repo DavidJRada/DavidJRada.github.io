@@ -30,6 +30,7 @@ h1 {
 
 nav {
     display: flex;
+    border-radius: 10px;
     background: indianred;
     width: 100%;
     font-size: 22px;
@@ -60,6 +61,12 @@ nav>ul {
     min-height: 600px;
     width: 35%;
 }
+table>div {
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
 
 .buttons {
     display: flex;
@@ -76,7 +83,6 @@ nav>ul {
     font-family: inherit;
     font-size: 15px;
     background: white;
-    /* padding: .1rem; */
     width: 40%;
     border: 3px solid black;
     justify-content: center;
@@ -279,12 +285,17 @@ span {
         width: 75%;
         margin: 0 auto;
         padding: 10;
-        height: 400px;
+        height: 620px;
     }
     .productivity {
         width: 75%;
         height: 70%;
         margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    #location {
+        margin: 0 auto;
+        height: 20%;
     }
     .todo {
         width: 50%;
@@ -312,13 +323,55 @@ span {
 
 @media only screen and (max-width: 480px) {
     #modal {
-        height: 60%;
+        height: 50%;
         font-size: 15px;
     }
+    #units {
+        font-size: 19px;
+    }
+    .todo {
+        width: 50%;
+        padding: 10;
+        background: green;
+        margin-left: -100;
+        align-items: flex-start;
+    }
+    .productivity {
+        width: 100%;
+    }
+    #newTaskInput {
+        margin-left: -10;
+    }
+    .completed {
+        width: 50%;
+    }
+    .nav3 {
+        display: flex;
+        width: 100%;
+    }
+    .nav3>ul {
+        width: 95%;
+        /* padding: 5px; */
+        /* flex-direction: column; */
+        /* justify-content: space-around; */
+        justify-content: stretch;
+    }
+    .nav3>ul>li {
+        width: 50%;
+        padding: 2px;
+    }
+    
 }
+
 @media only screen and (max-width: 550px) {
     #city {
         margin: 0 auto;
         width: 100%
     }
+}
+@media only screen and (max-width: 650px) {
+
+.nav3>ul>li:first-child {
+    padding: 0px 20px;
+}
 }
