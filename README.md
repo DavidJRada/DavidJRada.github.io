@@ -1,6 +1,6 @@
-ToDo-ist (A mostly weather app)
+<h1>ToDo-ist (A mostly weather app)<h1>
 
-<h1>Purpose</h1> 
+<h2>Purpose</h2> 
 View current and forecasted weather information and keep track of single tasks.
 
 <h2>Technical Details</h2>
