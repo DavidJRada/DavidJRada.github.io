@@ -338,7 +338,7 @@ span {
         align-items: flex-start;
     }
     .productivity {
-        width: 100%;
+        width: 75%;
     }
     #newTaskInput {
         margin-left: -10;
@@ -346,10 +346,7 @@ span {
     .completed {
         width: 50%;
     }
-    .nav3 {
-        display: flex;
-        width: 100%;
-    }
+
     .nav3>ul {
         width: 95%;
         justify-content: stretch;
