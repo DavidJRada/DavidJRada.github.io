@@ -61,6 +61,7 @@ nav>ul {
     min-height: 600px;
     width: 35%;
 }
+
 table>div {
     justify-content: center;
     text-align: center;
@@ -357,7 +358,6 @@ span {
         width: 50%;
         padding: 2px;
     }
-    
 }
 
 @media only screen and (max-width: 550px) {
@@ -366,9 +366,14 @@ span {
         width: 100%
     }
 }
-@media only screen and (max-width: 650px) {
 
-.nav3>ul>li:first-child {
-    padding: 0px 20px;
+@media only screen and (max-width: 650px) {
+    .nav3>ul>li:first-child {
+        padding: 0px 20px;
+    }
 }
+@media only screen and (max-width: 321px) {
+    #units {
+        font-size: 16px;
+    }
 }
