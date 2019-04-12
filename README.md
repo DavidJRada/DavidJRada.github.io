@@ -1,7 +1,7 @@
 ToDo-ist (A mostly weather app)
 
 <h1>Purpose<h1> 
-View current and forecasted weather information and keep track of single tasks.
+<p>View current and forecasted weather information and keep track of single tasks.</p>
 
 <h2>Technical Details<h2>
 The site has a field to enter the city you wish to retreive weather information on and radio buttons to decide what unit of temperature you prefer. The search bar will take in any city in the U.S. 
